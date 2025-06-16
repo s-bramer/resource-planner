@@ -1,2 +1,1 @@
-# resource-planner
-Resource Planner
+# Resource Planner
