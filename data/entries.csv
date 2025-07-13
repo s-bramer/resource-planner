@@ -1,0 +1,66 @@
+Employee,Week,Project,Hours,Status
+Stefan Bramer,16 Jun,DAR,12.0,Confirmed
+Stefan Bramer,23 Jun,DAR,12.0,Confirmed
+Stefan Bramer,30 Jun,DAR,1.0,Confirmed
+Stefan Bramer,07 Jul,DAR,4.0,Confirmed
+Stefan ,16 Jun,P3,12.0,Confirmed
+Stefan ,23 Jun,P3,1.0,Confirmed
+Stefan ,30 Jun,P3,34.0,Confirmed
+Stefan ,07 Jul,P3,2.0,Confirmed
+Stefan ,14 Jul,P3,2.0,Confirmed
+Me,16 Jun,P4,2.0,Confirmed
+Me,23 Jun,P4,12.0,Confirmed
+Me,30 Jun,P4,23.0,Confirmed
+Me,07 Jul,P4,25.0,Confirmed
+Me,14 Jul,P4,2.0,Confirmed
+Me,16 Jun,Poo,2.0,Confirmed
+Me,23 Jun,Poo,121.0,Confirmed
+Me,30 Jun,Poo,124.0,Confirmed
+Me,07 Jul,Poo,5.0,Confirmed
+Me,23 Jun,P4,12.0,Confirmed
+Me,30 Jun,P4,23.0,Confirmed
+Me,07 Jul,P4,25.0,Confirmed
+Me,14 Jul,P4,2.0,Confirmed
+Me,21 Jul,P4,0.0,Confirmed
+Me,28 Jul,P4,0.0,Confirmed
+Me,04 Aug,P4,0.0,Confirmed
+Me,11 Aug,P4,0.0,Confirmed
+Me,18 Aug,P4,0.0,Confirmed
+Me,25 Aug,P4,0.0,Confirmed
+Me,01 Sep,P4,0.0,Confirmed
+Me,08 Sep,P4,0.0,Confirmed
+Me,23 Jun,P5,121.0,Confirmed
+Me,30 Jun,P5,124.0,Confirmed
+Me,07 Jul,P5,5.0,Confirmed
+Me,14 Jul,P5,12.0,Confirmed
+Me,21 Jul,P5,0.0,Confirmed
+Me,28 Jul,P5,0.0,Confirmed
+Me,04 Aug,P5,0.0,Confirmed
+Me,11 Aug,P5,0.0,Confirmed
+Me,18 Aug,P5,0.0,Confirmed
+Me,25 Aug,P5,0.0,Confirmed
+Me,01 Sep,P5,0.0,Confirmed
+Me,08 Sep,P5,0.0,Confirmed
+Me,23 Jun,P4,12.0,Confirmed
+Me,30 Jun,P4,23.0,Confirmed
+Me,07 Jul,P4,25.0,Confirmed
+Me,14 Jul,P4,2.0,Confirmed
+Me,21 Jul,P4,0.0,Confirmed
+Me,28 Jul,P4,0.0,Confirmed
+Me,04 Aug,P4,0.0,Confirmed
+Me,11 Aug,P4,0.0,Confirmed
+Me,18 Aug,P4,0.0,Confirmed
+Me,25 Aug,P4,0.0,Confirmed
+Me,01 Sep,P4,0.0,Confirmed
+Me,08 Sep,P4,0.0,Confirmed
+Me,23 Jun,P5,121.0,Confirmed
+Me,30 Jun,P5,124.0,Confirmed
+Me,07 Jul,P5,12.0,Confirmed
+Me,21 Jul,P5,0.0,Confirmed
+Me,28 Jul,P5,0.0,Confirmed
+Me,04 Aug,P5,0.0,Confirmed
+Me,11 Aug,P5,0.0,Confirmed
+Me,18 Aug,P5,0.0,Confirmed
+Me,25 Aug,P5,0.0,Confirmed
+Me,01 Sep,P5,0.0,Confirmed
+Me,08 Sep,P5,0.0,Confirmed
