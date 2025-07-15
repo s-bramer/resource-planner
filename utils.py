@@ -1,7 +1,8 @@
-# utils.py
+import streamlit as st
 import os, sys
 import pandas as pd
 import numpy as np
+import hashlib
 
 
 def load_csv(file, columns):
@@ -22,6 +23,18 @@ def save_csv(df, file):
 
 
 def pivot_entries(df, status, weeks):
+    """
+    Pivots and aggregates hours for a given status and set of weeks.
+
+    Parameters:
+        df (pd.DataFrame): Input DataFrame containing at least 'Status', 'Project', 'Week', and 'Hours' columns.
+        status (str): The status value to filter the DataFrame by.
+        weeks (list): List of week identifiers (column values) to include in the pivoted output.
+
+    Returns:
+        pd.DataFrame: A DataFrame with 'Project' as rows and specified weeks as columns, containing the sum of 'Hours' for each project and week.
+                      If no data matches the status, returns an empty DataFrame with the appropriate columns.
+    """
     filtered = df[df["Status"] == status]
     pivot = filtered.pivot_table(
         index="Project", columns="Week", values="Hours", aggfunc="sum"
@@ -34,6 +47,17 @@ def pivot_entries(df, status, weeks):
         if not pivot.empty
         else pd.DataFrame(columns=["Project"] + weeks)
     )
+
+
+def styled_subheader(text, size=18, color="#4B8BBE"):
+    st.markdown(
+        f"<h3 style='font-size:{size}px; color:{color}; margin-bottom:10px;'>{text}</h3>",
+        unsafe_allow_html=True,
+    )
+
+
+def hash_df(df):
+    return hashlib.md5(pd.util.hash_pandas_object(df, index=True).values).hexdigest()
 
 
 # --- Summed Hours Row ---

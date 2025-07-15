@@ -1,66 +1,421 @@
 Employee,Week,Project,Hours,Status
-Stefan Bramer,16 Jun,DAR,12.0,Confirmed
-Stefan Bramer,23 Jun,DAR,12.0,Confirmed
-Stefan Bramer,30 Jun,DAR,1.0,Confirmed
-Stefan Bramer,07 Jul,DAR,4.0,Confirmed
-Stefan ,16 Jun,P3,12.0,Confirmed
-Stefan ,23 Jun,P3,1.0,Confirmed
-Stefan ,30 Jun,P3,34.0,Confirmed
-Stefan ,07 Jul,P3,2.0,Confirmed
-Stefan ,14 Jul,P3,2.0,Confirmed
-Me,16 Jun,P4,2.0,Confirmed
-Me,23 Jun,P4,12.0,Confirmed
-Me,30 Jun,P4,23.0,Confirmed
-Me,07 Jul,P4,25.0,Confirmed
-Me,14 Jul,P4,2.0,Confirmed
-Me,16 Jun,Poo,2.0,Confirmed
-Me,23 Jun,Poo,121.0,Confirmed
-Me,30 Jun,Poo,124.0,Confirmed
-Me,07 Jul,Poo,5.0,Confirmed
-Me,23 Jun,P4,12.0,Confirmed
-Me,30 Jun,P4,23.0,Confirmed
-Me,07 Jul,P4,25.0,Confirmed
-Me,14 Jul,P4,2.0,Confirmed
-Me,21 Jul,P4,0.0,Confirmed
-Me,28 Jul,P4,0.0,Confirmed
-Me,04 Aug,P4,0.0,Confirmed
-Me,11 Aug,P4,0.0,Confirmed
-Me,18 Aug,P4,0.0,Confirmed
-Me,25 Aug,P4,0.0,Confirmed
-Me,01 Sep,P4,0.0,Confirmed
-Me,08 Sep,P4,0.0,Confirmed
-Me,23 Jun,P5,121.0,Confirmed
-Me,30 Jun,P5,124.0,Confirmed
-Me,07 Jul,P5,5.0,Confirmed
-Me,14 Jul,P5,12.0,Confirmed
-Me,21 Jul,P5,0.0,Confirmed
-Me,28 Jul,P5,0.0,Confirmed
-Me,04 Aug,P5,0.0,Confirmed
-Me,11 Aug,P5,0.0,Confirmed
-Me,18 Aug,P5,0.0,Confirmed
-Me,25 Aug,P5,0.0,Confirmed
-Me,01 Sep,P5,0.0,Confirmed
-Me,08 Sep,P5,0.0,Confirmed
-Me,23 Jun,P4,12.0,Confirmed
-Me,30 Jun,P4,23.0,Confirmed
-Me,07 Jul,P4,25.0,Confirmed
-Me,14 Jul,P4,2.0,Confirmed
-Me,21 Jul,P4,0.0,Confirmed
-Me,28 Jul,P4,0.0,Confirmed
-Me,04 Aug,P4,0.0,Confirmed
-Me,11 Aug,P4,0.0,Confirmed
-Me,18 Aug,P4,0.0,Confirmed
-Me,25 Aug,P4,0.0,Confirmed
-Me,01 Sep,P4,0.0,Confirmed
-Me,08 Sep,P4,0.0,Confirmed
-Me,23 Jun,P5,121.0,Confirmed
-Me,30 Jun,P5,124.0,Confirmed
-Me,07 Jul,P5,12.0,Confirmed
-Me,21 Jul,P5,0.0,Confirmed
-Me,28 Jul,P5,0.0,Confirmed
-Me,04 Aug,P5,0.0,Confirmed
-Me,11 Aug,P5,0.0,Confirmed
-Me,18 Aug,P5,0.0,Confirmed
-Me,25 Aug,P5,0.0,Confirmed
-Me,01 Sep,P5,0.0,Confirmed
-Me,08 Sep,P5,0.0,Confirmed
+Susi,30-Jun,Vacation,,Leave
+Susi,07-Jul,Vacation,,Leave
+Susi,14-Jul,Vacation,,Leave
+Susi,21-Jul,Vacation,,Leave
+Susi,28-Jul,Vacation,,Leave
+Susi,04-Aug,Vacation,,Leave
+Susi,11-Aug,Vacation,,Leave
+Susi,18-Aug,Vacation,,Leave
+Susi,25-Aug,Vacation,,Leave
+Susi,01-Sep,Vacation,,Leave
+Susi,08-Sep,Vacation,,Leave
+Susi,15-Sep,Vacation,,Leave
+Susi,30-Jun,Holiday,,Leave
+Susi,07-Jul,Holiday,,Leave
+Susi,14-Jul,Holiday,,Leave
+Susi,21-Jul,Holiday,,Leave
+Susi,28-Jul,Holiday,,Leave
+Susi,04-Aug,Holiday,,Leave
+Susi,11-Aug,Holiday,,Leave
+Susi,18-Aug,Holiday,,Leave
+Susi,25-Aug,Holiday,,Leave
+Susi,01-Sep,Holiday,,Leave
+Susi,08-Sep,Holiday,,Leave
+Susi,15-Sep,Holiday,,Leave
+Susi,30-Jun,Sick Leave,,Leave
+Susi,07-Jul,Sick Leave,,Leave
+Susi,14-Jul,Sick Leave,,Leave
+Susi,21-Jul,Sick Leave,,Leave
+Susi,28-Jul,Sick Leave,,Leave
+Susi,04-Aug,Sick Leave,,Leave
+Susi,11-Aug,Sick Leave,,Leave
+Susi,18-Aug,Sick Leave,,Leave
+Susi,25-Aug,Sick Leave,,Leave
+Susi,01-Sep,Sick Leave,,Leave
+Susi,08-Sep,Sick Leave,,Leave
+Susi,15-Sep,Sick Leave,,Leave
+William,30-Jun,Vacation,0.0,Leave
+William,07-Jul,Vacation,0.0,Leave
+William,14-Jul,Vacation,0.0,Leave
+William,21-Jul,Vacation,0.0,Leave
+William,28-Jul,Vacation,0.0,Leave
+William,04-Aug,Vacation,0.0,Leave
+William,11-Aug,Vacation,0.0,Leave
+William,18-Aug,Vacation,0.0,Leave
+William,25-Aug,Vacation,0.0,Leave
+William,01-Sep,Vacation,0.0,Leave
+William,08-Sep,Vacation,0.0,Leave
+William,15-Sep,Vacation,0.0,Leave
+William,30-Jun,Holiday,0.0,Leave
+William,07-Jul,Holiday,0.0,Leave
+William,14-Jul,Holiday,40.0,Leave
+William,21-Jul,Holiday,40.0,Leave
+William,28-Jul,Holiday,40.0,Leave
+William,04-Aug,Holiday,0.0,Leave
+William,11-Aug,Holiday,0.0,Leave
+William,18-Aug,Holiday,0.0,Leave
+William,25-Aug,Holiday,0.0,Leave
+William,01-Sep,Holiday,0.0,Leave
+William,08-Sep,Holiday,0.0,Leave
+William,15-Sep,Holiday,0.0,Leave
+William,30-Jun,Sick Leave,0.0,Leave
+William,07-Jul,Sick Leave,0.0,Leave
+William,14-Jul,Sick Leave,0.0,Leave
+William,21-Jul,Sick Leave,0.0,Leave
+William,28-Jul,Sick Leave,0.0,Leave
+William,04-Aug,Sick Leave,0.0,Leave
+William,11-Aug,Sick Leave,0.0,Leave
+William,18-Aug,Sick Leave,0.0,Leave
+William,25-Aug,Sick Leave,0.0,Leave
+William,01-Sep,Sick Leave,0.0,Leave
+William,08-Sep,Sick Leave,0.0,Leave
+William,15-Sep,Sick Leave,0.0,Leave
+Zack,30-Jun,Vacation,0.0,Leave
+Zack,07-Jul,Vacation,0.0,Leave
+Zack,14-Jul,Vacation,0.0,Leave
+Zack,21-Jul,Vacation,0.0,Leave
+Zack,28-Jul,Vacation,0.0,Leave
+Zack,04-Aug,Vacation,0.0,Leave
+Zack,11-Aug,Vacation,0.0,Leave
+Zack,18-Aug,Vacation,0.0,Leave
+Zack,25-Aug,Vacation,0.0,Leave
+Zack,01-Sep,Vacation,0.0,Leave
+Zack,08-Sep,Vacation,0.0,Leave
+Zack,15-Sep,Vacation,0.0,Leave
+Zack,30-Jun,Holiday,0.0,Leave
+Zack,07-Jul,Holiday,0.0,Leave
+Zack,14-Jul,Holiday,0.0,Leave
+Zack,21-Jul,Holiday,0.0,Leave
+Zack,28-Jul,Holiday,0.0,Leave
+Zack,04-Aug,Holiday,0.0,Leave
+Zack,11-Aug,Holiday,0.0,Leave
+Zack,18-Aug,Holiday,0.0,Leave
+Zack,25-Aug,Holiday,0.0,Leave
+Zack,01-Sep,Holiday,0.0,Leave
+Zack,08-Sep,Holiday,0.0,Leave
+Zack,15-Sep,Holiday,0.0,Leave
+Zack,30-Jun,Sick Leave,0.0,Leave
+Zack,07-Jul,Sick Leave,0.0,Leave
+Zack,14-Jul,Sick Leave,0.0,Leave
+Zack,21-Jul,Sick Leave,0.0,Leave
+Zack,28-Jul,Sick Leave,0.0,Leave
+Zack,04-Aug,Sick Leave,0.0,Leave
+Zack,11-Aug,Sick Leave,0.0,Leave
+Zack,18-Aug,Sick Leave,0.0,Leave
+Zack,25-Aug,Sick Leave,0.0,Leave
+Zack,01-Sep,Sick Leave,0.0,Leave
+Zack,08-Sep,Sick Leave,0.0,Leave
+Zack,15-Sep,Sick Leave,0.0,Leave
+Eric,30-Jun,Vacation,0.0,Leave
+Eric,07-Jul,Vacation,0.0,Leave
+Eric,14-Jul,Vacation,0.0,Leave
+Eric,21-Jul,Vacation,0.0,Leave
+Eric,28-Jul,Vacation,0.0,Leave
+Eric,04-Aug,Vacation,0.0,Leave
+Eric,11-Aug,Vacation,0.0,Leave
+Eric,18-Aug,Vacation,0.0,Leave
+Eric,25-Aug,Vacation,0.0,Leave
+Eric,01-Sep,Vacation,0.0,Leave
+Eric,08-Sep,Vacation,0.0,Leave
+Eric,15-Sep,Vacation,0.0,Leave
+Eric,30-Jun,Holiday,0.0,Leave
+Eric,07-Jul,Holiday,12.0,Leave
+Eric,14-Jul,Holiday,0.0,Leave
+Eric,21-Jul,Holiday,555.0,Leave
+Eric,28-Jul,Holiday,0.0,Leave
+Eric,04-Aug,Holiday,0.0,Leave
+Eric,11-Aug,Holiday,0.0,Leave
+Eric,18-Aug,Holiday,0.0,Leave
+Eric,25-Aug,Holiday,0.0,Leave
+Eric,01-Sep,Holiday,0.0,Leave
+Eric,08-Sep,Holiday,0.0,Leave
+Eric,15-Sep,Holiday,0.0,Leave
+Eric,30-Jun,Sick Leave,0.0,Leave
+Eric,07-Jul,Sick Leave,0.0,Leave
+Eric,14-Jul,Sick Leave,0.0,Leave
+Eric,21-Jul,Sick Leave,0.0,Leave
+Eric,28-Jul,Sick Leave,0.0,Leave
+Eric,04-Aug,Sick Leave,0.0,Leave
+Eric,11-Aug,Sick Leave,0.0,Leave
+Eric,18-Aug,Sick Leave,0.0,Leave
+Eric,25-Aug,Sick Leave,0.0,Leave
+Eric,01-Sep,Sick Leave,0.0,Leave
+Eric,08-Sep,Sick Leave,0.0,Leave
+Eric,15-Sep,Sick Leave,0.0,Leave
+Thomas,30-Jun,Vacation,0.0,Leave
+Thomas,07-Jul,Vacation,0.0,Leave
+Thomas,14-Jul,Vacation,0.0,Leave
+Thomas,21-Jul,Vacation,0.0,Leave
+Thomas,28-Jul,Vacation,0.0,Leave
+Thomas,04-Aug,Vacation,0.0,Leave
+Thomas,11-Aug,Vacation,0.0,Leave
+Thomas,18-Aug,Vacation,0.0,Leave
+Thomas,25-Aug,Vacation,0.0,Leave
+Thomas,01-Sep,Vacation,0.0,Leave
+Thomas,08-Sep,Vacation,0.0,Leave
+Thomas,15-Sep,Vacation,0.0,Leave
+Thomas,30-Jun,Holiday,0.0,Leave
+Thomas,07-Jul,Holiday,0.0,Leave
+Thomas,14-Jul,Holiday,0.0,Leave
+Thomas,21-Jul,Holiday,40.0,Leave
+Thomas,28-Jul,Holiday,0.0,Leave
+Thomas,04-Aug,Holiday,0.0,Leave
+Thomas,11-Aug,Holiday,0.0,Leave
+Thomas,18-Aug,Holiday,0.0,Leave
+Thomas,25-Aug,Holiday,0.0,Leave
+Thomas,01-Sep,Holiday,0.0,Leave
+Thomas,08-Sep,Holiday,0.0,Leave
+Thomas,15-Sep,Holiday,0.0,Leave
+Thomas,30-Jun,Sick Leave,0.0,Leave
+Thomas,07-Jul,Sick Leave,0.0,Leave
+Thomas,14-Jul,Sick Leave,0.0,Leave
+Thomas,21-Jul,Sick Leave,0.0,Leave
+Thomas,28-Jul,Sick Leave,0.0,Leave
+Thomas,04-Aug,Sick Leave,0.0,Leave
+Thomas,11-Aug,Sick Leave,0.0,Leave
+Thomas,18-Aug,Sick Leave,0.0,Leave
+Thomas,25-Aug,Sick Leave,0.0,Leave
+Thomas,01-Sep,Sick Leave,0.0,Leave
+Thomas,08-Sep,Sick Leave,0.0,Leave
+Thomas,15-Sep,Sick Leave,0.0,Leave
+Thomas,30-Jun,P2,666.0,Confirmed
+Thomas,07-Jul,P2,999.0,Confirmed
+Thomas,14-Jul,P2,0.0,Confirmed
+Thomas,21-Jul,P2,11.0,Confirmed
+Thomas,28-Jul,P2,5.0,Confirmed
+Thomas,04-Aug,P2,3.0,Confirmed
+Thomas,11-Aug,P2,1.0,Confirmed
+Thomas,18-Aug,P2,0.0,Confirmed
+Thomas,25-Aug,P2,0.0,Confirmed
+Thomas,01-Sep,P2,0.0,Confirmed
+Thomas,08-Sep,P2,0.0,Confirmed
+Thomas,15-Sep,P2,0.0,Confirmed
+Stefan Bramer,30-Jun,Vacation,0.0,Leave
+Stefan Bramer,07-Jul,Vacation,0.0,Leave
+Stefan Bramer,14-Jul,Vacation,0.0,Leave
+Stefan Bramer,21-Jul,Vacation,0.0,Leave
+Stefan Bramer,28-Jul,Vacation,0.0,Leave
+Stefan Bramer,04-Aug,Vacation,0.0,Leave
+Stefan Bramer,11-Aug,Vacation,0.0,Leave
+Stefan Bramer,18-Aug,Vacation,0.0,Leave
+Stefan Bramer,25-Aug,Vacation,0.0,Leave
+Stefan Bramer,01-Sep,Vacation,0.0,Leave
+Stefan Bramer,08-Sep,Vacation,0.0,Leave
+Stefan Bramer,15-Sep,Vacation,0.0,Leave
+Stefan Bramer,30-Jun,Holiday,0.0,Leave
+Stefan Bramer,07-Jul,Holiday,0.0,Leave
+Stefan Bramer,14-Jul,Holiday,12.0,Leave
+Stefan Bramer,21-Jul,Holiday,0.0,Leave
+Stefan Bramer,28-Jul,Holiday,0.0,Leave
+Stefan Bramer,04-Aug,Holiday,0.0,Leave
+Stefan Bramer,11-Aug,Holiday,0.0,Leave
+Stefan Bramer,18-Aug,Holiday,0.0,Leave
+Stefan Bramer,25-Aug,Holiday,0.0,Leave
+Stefan Bramer,01-Sep,Holiday,0.0,Leave
+Stefan Bramer,08-Sep,Holiday,0.0,Leave
+Stefan Bramer,15-Sep,Holiday,0.0,Leave
+Stefan Bramer,30-Jun,Sick Leave,0.0,Leave
+Stefan Bramer,07-Jul,Sick Leave,0.0,Leave
+Stefan Bramer,14-Jul,Sick Leave,0.0,Leave
+Stefan Bramer,21-Jul,Sick Leave,0.0,Leave
+Stefan Bramer,28-Jul,Sick Leave,0.0,Leave
+Stefan Bramer,04-Aug,Sick Leave,0.0,Leave
+Stefan Bramer,11-Aug,Sick Leave,0.0,Leave
+Stefan Bramer,18-Aug,Sick Leave,0.0,Leave
+Stefan Bramer,25-Aug,Sick Leave,0.0,Leave
+Stefan Bramer,01-Sep,Sick Leave,0.0,Leave
+Stefan Bramer,08-Sep,Sick Leave,0.0,Leave
+Stefan Bramer,15-Sep,Sick Leave,0.0,Leave
+Theo,30-Jun,Vacation,0.0,Leave
+Theo,07-Jul,Vacation,0.0,Leave
+Theo,14-Jul,Vacation,0.0,Leave
+Theo,21-Jul,Vacation,0.0,Leave
+Theo,28-Jul,Vacation,0.0,Leave
+Theo,04-Aug,Vacation,0.0,Leave
+Theo,11-Aug,Vacation,0.0,Leave
+Theo,18-Aug,Vacation,0.0,Leave
+Theo,25-Aug,Vacation,0.0,Leave
+Theo,01-Sep,Vacation,0.0,Leave
+Theo,08-Sep,Vacation,0.0,Leave
+Theo,15-Sep,Vacation,0.0,Leave
+Theo,30-Jun,Holiday,12.0,Leave
+Theo,07-Jul,Holiday,15.0,Leave
+Theo,14-Jul,Holiday,5.0,Leave
+Theo,21-Jul,Holiday,6.0,Leave
+Theo,28-Jul,Holiday,0.0,Leave
+Theo,04-Aug,Holiday,0.0,Leave
+Theo,11-Aug,Holiday,0.0,Leave
+Theo,18-Aug,Holiday,0.0,Leave
+Theo,25-Aug,Holiday,0.0,Leave
+Theo,01-Sep,Holiday,0.0,Leave
+Theo,08-Sep,Holiday,0.0,Leave
+Theo,15-Sep,Holiday,0.0,Leave
+Theo,30-Jun,Sick Leave,0.0,Leave
+Theo,07-Jul,Sick Leave,0.0,Leave
+Theo,14-Jul,Sick Leave,0.0,Leave
+Theo,21-Jul,Sick Leave,0.0,Leave
+Theo,28-Jul,Sick Leave,0.0,Leave
+Theo,04-Aug,Sick Leave,0.0,Leave
+Theo,11-Aug,Sick Leave,0.0,Leave
+Theo,18-Aug,Sick Leave,0.0,Leave
+Theo,25-Aug,Sick Leave,0.0,Leave
+Theo,01-Sep,Sick Leave,0.0,Leave
+Theo,08-Sep,Sick Leave,0.0,Leave
+Theo,15-Sep,Sick Leave,0.0,Leave
+Yorgen,30-Jun,Vacation,0.0,Leave
+Yorgen,07-Jul,Vacation,0.0,Leave
+Yorgen,14-Jul,Vacation,0.0,Leave
+Yorgen,21-Jul,Vacation,0.0,Leave
+Yorgen,28-Jul,Vacation,0.0,Leave
+Yorgen,04-Aug,Vacation,0.0,Leave
+Yorgen,11-Aug,Vacation,0.0,Leave
+Yorgen,18-Aug,Vacation,0.0,Leave
+Yorgen,25-Aug,Vacation,0.0,Leave
+Yorgen,01-Sep,Vacation,0.0,Leave
+Yorgen,08-Sep,Vacation,0.0,Leave
+Yorgen,15-Sep,Vacation,0.0,Leave
+Yorgen,30-Jun,Holiday,0.0,Leave
+Yorgen,07-Jul,Holiday,0.0,Leave
+Yorgen,14-Jul,Holiday,0.0,Leave
+Yorgen,21-Jul,Holiday,14.0,Leave
+Yorgen,28-Jul,Holiday,0.0,Leave
+Yorgen,04-Aug,Holiday,0.0,Leave
+Yorgen,11-Aug,Holiday,0.0,Leave
+Yorgen,18-Aug,Holiday,0.0,Leave
+Yorgen,25-Aug,Holiday,0.0,Leave
+Yorgen,01-Sep,Holiday,0.0,Leave
+Yorgen,08-Sep,Holiday,0.0,Leave
+Yorgen,15-Sep,Holiday,0.0,Leave
+Yorgen,30-Jun,Sick Leave,0.0,Leave
+Yorgen,07-Jul,Sick Leave,0.0,Leave
+Yorgen,14-Jul,Sick Leave,0.0,Leave
+Yorgen,21-Jul,Sick Leave,0.0,Leave
+Yorgen,28-Jul,Sick Leave,0.0,Leave
+Yorgen,04-Aug,Sick Leave,0.0,Leave
+Yorgen,11-Aug,Sick Leave,0.0,Leave
+Yorgen,18-Aug,Sick Leave,0.0,Leave
+Yorgen,25-Aug,Sick Leave,0.0,Leave
+Yorgen,01-Sep,Sick Leave,0.0,Leave
+Yorgen,08-Sep,Sick Leave,0.0,Leave
+Yorgen,15-Sep,Sick Leave,0.0,Leave
+Elsa,30-Jun,Vacation,0.0,Leave
+Elsa,07-Jul,Vacation,0.0,Leave
+Elsa,14-Jul,Vacation,0.0,Leave
+Elsa,21-Jul,Vacation,0.0,Leave
+Elsa,28-Jul,Vacation,0.0,Leave
+Elsa,04-Aug,Vacation,0.0,Leave
+Elsa,11-Aug,Vacation,0.0,Leave
+Elsa,18-Aug,Vacation,0.0,Leave
+Elsa,25-Aug,Vacation,0.0,Leave
+Elsa,01-Sep,Vacation,0.0,Leave
+Elsa,08-Sep,Vacation,0.0,Leave
+Elsa,15-Sep,Vacation,0.0,Leave
+Elsa,30-Jun,Holiday,13.0,Leave
+Elsa,07-Jul,Holiday,1.0,Leave
+Elsa,14-Jul,Holiday,40.0,Leave
+Elsa,21-Jul,Holiday,40.0,Leave
+Elsa,28-Jul,Holiday,4.0,Leave
+Elsa,04-Aug,Holiday,1.0,Leave
+Elsa,11-Aug,Holiday,23.0,Leave
+Elsa,18-Aug,Holiday,34.0,Leave
+Elsa,25-Aug,Holiday,12.0,Leave
+Elsa,01-Sep,Holiday,1.0,Leave
+Elsa,08-Sep,Holiday,0.0,Leave
+Elsa,15-Sep,Holiday,0.0,Leave
+Elsa,30-Jun,Sick Leave,0.0,Leave
+Elsa,07-Jul,Sick Leave,0.0,Leave
+Elsa,14-Jul,Sick Leave,0.0,Leave
+Elsa,21-Jul,Sick Leave,0.0,Leave
+Elsa,28-Jul,Sick Leave,0.0,Leave
+Elsa,04-Aug,Sick Leave,0.0,Leave
+Elsa,11-Aug,Sick Leave,0.0,Leave
+Elsa,18-Aug,Sick Leave,12.0,Leave
+Elsa,25-Aug,Sick Leave,0.0,Leave
+Elsa,01-Sep,Sick Leave,0.0,Leave
+Elsa,08-Sep,Sick Leave,0.0,Leave
+Elsa,15-Sep,Sick Leave,0.0,Leave
+Elsa,30-Jun,Yo,1.0,Tentative
+Elsa,07-Jul,Yo,0.0,Tentative
+Elsa,14-Jul,Yo,4.0,Tentative
+Elsa,21-Jul,Yo,2.0,Tentative
+Elsa,28-Jul,Yo,3.0,Tentative
+Elsa,04-Aug,Yo,1.0,Tentative
+Elsa,11-Aug,Yo,45.0,Tentative
+Elsa,18-Aug,Yo,5.0,Tentative
+Elsa,25-Aug,Yo,0.0,Tentative
+Elsa,01-Sep,Yo,12.0,Tentative
+Elsa,08-Sep,Yo,0.0,Tentative
+Elsa,15-Sep,Yo,0.0,Tentative
+Elsa,07-Jul,My Project,12.0,Confirmed
+Elsa,30-Jun,My Project,3.0,Confirmed
+Elsa,14-Jul,My Project,12.0,Confirmed
+Elsa,21-Jul,My Project,2.0,Confirmed
+Elsa,28-Jul,My Project,12.0,Confirmed
+Elsa,04-Aug,My Project,34.0,Confirmed
+Elsa,11-Aug,My Project,12.0,Confirmed
+Elsa,18-Aug,My Project,2.0,Confirmed
+Elsa,25-Aug,My Project,4.0,Confirmed
+Elsa,01-Sep,My Project,0.0,Confirmed
+Elsa,08-Sep,My Project,0.0,Confirmed
+Elsa,15-Sep,My Project,0.0,Confirmed
+Thorsten,30-Jun,Vacation,0.0,Leave
+Thorsten,07-Jul,Vacation,0.0,Leave
+Thorsten,14-Jul,Vacation,0.0,Leave
+Thorsten,21-Jul,Vacation,0.0,Leave
+Thorsten,28-Jul,Vacation,0.0,Leave
+Thorsten,04-Aug,Vacation,0.0,Leave
+Thorsten,11-Aug,Vacation,0.0,Leave
+Thorsten,18-Aug,Vacation,0.0,Leave
+Thorsten,25-Aug,Vacation,0.0,Leave
+Thorsten,01-Sep,Vacation,0.0,Leave
+Thorsten,08-Sep,Vacation,0.0,Leave
+Thorsten,15-Sep,Vacation,0.0,Leave
+Thorsten,30-Jun,Holiday,12.0,Leave
+Thorsten,07-Jul,Holiday,0.0,Leave
+Thorsten,14-Jul,Holiday,12.0,Leave
+Thorsten,21-Jul,Holiday,23.0,Leave
+Thorsten,28-Jul,Holiday,0.0,Leave
+Thorsten,04-Aug,Holiday,12.0,Leave
+Thorsten,11-Aug,Holiday,0.0,Leave
+Thorsten,18-Aug,Holiday,12.0,Leave
+Thorsten,25-Aug,Holiday,0.0,Leave
+Thorsten,01-Sep,Holiday,55.0,Leave
+Thorsten,08-Sep,Holiday,0.0,Leave
+Thorsten,15-Sep,Holiday,0.0,Leave
+Thorsten,30-Jun,Sick Leave,0.0,Leave
+Thorsten,07-Jul,Sick Leave,0.0,Leave
+Thorsten,14-Jul,Sick Leave,0.0,Leave
+Thorsten,21-Jul,Sick Leave,0.0,Leave
+Thorsten,28-Jul,Sick Leave,0.0,Leave
+Thorsten,04-Aug,Sick Leave,0.0,Leave
+Thorsten,11-Aug,Sick Leave,0.0,Leave
+Thorsten,18-Aug,Sick Leave,0.0,Leave
+Thorsten,25-Aug,Sick Leave,0.0,Leave
+Thorsten,01-Sep,Sick Leave,0.0,Leave
+Thorsten,08-Sep,Sick Leave,0.0,Leave
+Thorsten,15-Sep,Sick Leave,0.0,Leave
+Thorsten,30-Jun,Thorsten does some work,12.0,Confirmed
+Thorsten,07-Jul,Thorsten does some work,1.0,Confirmed
+Thorsten,14-Jul,Thorsten does some work,1.0,Confirmed
+Thorsten,21-Jul,Thorsten does some work,0.0,Confirmed
+Thorsten,28-Jul,Thorsten does some work,0.0,Confirmed
+Thorsten,04-Aug,Thorsten does some work,0.0,Confirmed
+Thorsten,11-Aug,Thorsten does some work,12.0,Confirmed
+Thorsten,18-Aug,Thorsten does some work,0.0,Confirmed
+Thorsten,25-Aug,Thorsten does some work,0.0,Confirmed
+Thorsten,01-Sep,Thorsten does some work,0.0,Confirmed
+Thorsten,08-Sep,Thorsten does some work,0.0,Confirmed
+Thorsten,15-Sep,Thorsten does some work,0.0,Confirmed
+Thorsten,30-Jun,Thorsten likes his work,12.0,Confirmed
+Thorsten,21-Jul,Thorsten likes his work,34.0,Confirmed
+Thorsten,18-Aug,Thorsten likes his work,14.0,Confirmed
+Thorsten,11-Aug,Thorsten likes his work,45.0,Confirmed
+Thorsten,14-Jul,Thorsten likes his work,56.0,Confirmed
+Thorsten,04-Aug,Thorsten likes his work,12.0,Confirmed
+Thorsten,25-Aug,Thorsten likes his work,12.0,Confirmed
+Thorsten,07-Jul,Thorsten likes his work,23.0,Confirmed
+Thorsten,28-Jul,Thorsten likes his work,12.0,Confirmed
+Thorsten,01-Sep,Thorsten likes his work,12.0,Confirmed
+Thorsten,08-Sep,Thorsten likes his work,66.0,Confirmed
+Thorsten,15-Sep,Thorsten likes his work,12.0,Confirmed
