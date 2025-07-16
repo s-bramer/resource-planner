@@ -31,42 +31,47 @@
 * Flow chart
 #+BEGIN_SRC mermaid :file img/full.svg :results file link
 flowchart TD
-    A[App Launch: main.py] --> B[Load employees.csv]
-    B --> C[Employee Selection via Dropdown]
-    C --> D{Employee Selected?}
+    A[Start App] --> B[Load Data from CSVs: entries, skills, employees]
+    B --> C[Sidebar: Select or Add Employee]
+    C --> D[Slider: Select Week Range]
+    D --> E[Set week_strs in session_state]
+    E --> F[Create Employee Object]
+    F --> G[Render Time Planner Tab]
 
-    D -- Yes --> E[Load entries.csv]
-    E --> F[Filter entries for selected employee]
-    F --> G[Create Employee Object]
-    G --> H[Populate Confirmed, Tentative, Leave data_editors]
+    G --> H[Load Confirmed / Tentative / Leave Data]
+    H --> I[User Edits st.data_editor Table]
 
-    H --> I[User Edits Weekly Hours]
+    I --> J[Detect Changes via Hash Check]
+    J --> K[Save to CSV if Changed]
+    K --> L[st.rerun() to Reload App]
+    L --> B
 
-    I --> J["User presses 'Save All Entries'"]
-    J --> K["Employee.save_entries()"]
-    K --> L[Load full entries.csv]
-    L --> M[Remove old entries for current employee]
-    M --> N[Append updated entries]
-    N --> O[Save entries.csv]
+    F --> M[Render Dashboard Tab]
+    M --> N[Group Data by Week and Status]
+    N --> O[Plot Altair Stacked Bar + Utilization Line]
 
-    D -- No --> P[Prompt to Add New Employee]
-    P --> Q[Enter Name]
-    Q --> R[Append to employees.csv]
-    R --> S[Initialize Default Leave Rows]
-    S --> T[Append Default Leave Rows to entries.csv]
-    T --> U[Reload and Rerun App]
-    U --> C
+    C --> P{New Employee?}
+    P -- Yes --> Q[Append to employees.csv]
+    Q --> R[Add Leave Rows per Week]
+    R --> S[Save to entries.csv]
+    S --> T[Update query_params to select new employee]
+    T --> L[st.rerun()]
+    P -- No --> F
 #+END_SRC
 * Deployment
 - Docker image on local server Max will provide
-* TODO Outstanding  [0/7]
-- [ ] user needs to be able to change which weeks to view
+* TODO Outstanding  [1/11]
+- [ ] fix save issue when changing project name
+- [ ] allow deletion of rows/projects
+- [X] user needs to be able to change which weeks to view
+- [ ] add input validation (e.g., no negative hours, cap at 40h/week)
 - [ ] understand caching data and session.state data
+- [ ] there seems to be some redundant loading and saving of the CSV (e.g. when moving week slider)
   - e.g. current employee name should be in session.state data so you stick with it during reloads
   - database can be loaded into cache once than reused, not sure though, gets confusing
   - careful when changing data all session/cache data needs updating to have the latest
 - [ ] log user entries and save current db in background - AVOID DATA LOSS
-- [ ] add input validation (e.g., no negative hours, cap at 40h/week)
-- [ ] allow deletion of rows/projects
 - [ ] exporting to Excel or PDF reports.
 - [ ] Sync with Google Sheets or a cloud database for multi-user setups?
+- [ ] send email to Patrick if someone add holiday/vacation
+- [ ] skills need to be updatable

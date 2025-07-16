@@ -42,9 +42,7 @@ class Employee:
             pd.DataFrame: The updated entries DataFrame.
         """
         for _, row in df.iterrows():
-            project = row.get("Project", None)
-            if project is None:
-                project = row.get("Type")
+            project = row.get("Project")
             if not project:
                 continue
             for week in weeks:

@@ -49,7 +49,7 @@ def pivot_entries(df, status, weeks):
     )
 
 
-def styled_subheader(text, size=18, color="#4B8BBE"):
+def styled_subheader(text, size=18, color="#dedede"):
     st.markdown(
         f"<h3 style='font-size:{size}px; color:{color}; margin-bottom:10px;'>{text}</h3>",
         unsafe_allow_html=True,

@@ -17,14 +17,21 @@ EMPLOYEES_FILE = "data/employees.csv"
 DEFAULT_LEAVE_TYPES = ["Vacation", "Holiday", "Sick Leave"]
 
 # ---- Precompute Weeks ----
-# Find the most recent Monday (start of current week)
-today = date.today()
-start_monday = today - timedelta(days=today.weekday())
-# Start from 2 weeks back
-start_date = start_monday - timedelta(weeks=2)
-week_dates = [start_date + timedelta(weeks=i) for i in range(12)]
-week_strs = [w.strftime("%d-%b") for w in week_dates]
-# print(f"Weeks: {week_strs}")
+# # Find the most recent Monday (start of current week)
+# today = date.today()
+# start_monday = today - timedelta(days=today.weekday())
+# # Start from 2 weeks back
+# start_date = start_monday - timedelta(weeks=2)
+# week_dates = [start_date + timedelta(weeks=i) for i in range(12)]
+# week_strs = [w.strftime("%d-%b") for w in week_dates]
+# # print(f"Weeks: {week_strs}")
+
+# today = date.today()
+# start_monday = today - timedelta(days=today.weekday())
+# start_date = start_monday - timedelta(weeks=2)
+# week_range = st.session_state.get("week_range", 12)
+# week_dates = [start_date + timedelta(weeks=i) for i in range(week_range)]
+# week_strs = [w.strftime("%d-%b") for w in week_dates]
 
 
 # ---- Cached Data Load ----
@@ -32,7 +39,7 @@ week_strs = [w.strftime("%d-%b") for w in week_dates]
 def load_all_data():
     return (
         load_csv(ENTRIES_FILE, ["Employee", "Week", "Project", "Hours", "Status"]),
-        load_csv(SKILLS_FILE, ["Employee", "Skill", "Level"]),
+        load_csv(SKILLS_FILE, ["Employee", "Category", "Skill", "Level"]),
         load_csv(EMPLOYEES_FILE, ["Employee"]),
     )
 
@@ -40,80 +47,99 @@ def load_all_data():
 # print("Loading all data...")
 df_all_entries, df_all_skills, df_all_employees = load_all_data()
 
-# ---- Sidebar: Employee Selection ----
-st.sidebar.title("Resource Planner")
-st.sidebar.subheader("Employee Selection")
 
-employees = sorted(load_csv(EMPLOYEES_FILE, ["Employee"])["Employee"].dropna().unique())
+#################
+# -- SIDEBAR -- #
+#################
+with st.sidebar:
+    st.image("img/logo_white.png", width=200)
+    st.title("Resource Planner")
+    # st.subheader("Employee Selection")
 
-# Determine default employee: new employee > selected employee > query params > first employee
-if "new_emp_to_select" in st.session_state:
-    st.query_params.update(selected=st.session_state.new_emp_to_select)
-    default_emp = st.session_state.new_emp_to_select
-    del st.session_state.new_emp_to_select
+    employees = sorted(
+        load_csv(EMPLOYEES_FILE, ["Employee"])["Employee"].dropna().unique()
+    )
 
-elif (
-    "selected_employee" in st.session_state
-    and st.session_state.selected_employee in employees
-):
-    default_emp = st.session_state.selected_employee
-else:
-    query_params = st.query_params
-    default_emp = query_params.get("selected", [employees[0]])[0]
+    # Set default employee
+    if "new_emp_to_select" in st.session_state:
+        st.query_params.update(selected=st.session_state.new_emp_to_select)
+        default_emp = st.session_state.new_emp_to_select
+        del st.session_state.new_emp_to_select
+    elif (
+        "selected_employee" in st.session_state
+        and st.session_state.selected_employee in employees
+    ):
+        default_emp = st.session_state.selected_employee
+    else:
+        query_params = st.query_params
+        default_emp = query_params.get("selected", [employees[0]])[0]
 
-if default_emp in employees:
-    selected_index = employees.index(default_emp)
-else:
-    selected_index = 0
-print(f"default_emp: {default_emp}")
+    selected_index = employees.index(default_emp) if default_emp in employees else 0
 
+    # on dropdown change, update query params and reload data
+    def on_employee_change():
+        st.query_params.update(selected=st.session_state.selected_employee)
+        st.cache_data.clear()
+        # Reload all data
+        df_all_entries, df_all_skills, df_all_employees = load_all_data()
+        for key in ["confirmed_hash", "tentative_hash", "leave_hash"]:
+            st.session_state.pop(key, None)
 
-# on dropdown change, update query params and reload data
-def on_employee_change():
-    st.query_params.update(selected=st.session_state.selected_employee)
-    # Clear cached data to reload
-    st.cache_data.clear()
-    # Reload all data
-    df_all_entries, df_all_skills, df_all_employees = load_all_data()
-    employee = Employee(selected, df_all_entries, df_all_skills)
-    # Reset hash states to ensure fresh tracking per employee
-    for key in ["confirmed_hash", "tentative_hash", "leave_hash"]:
-        if key in st.session_state:
-            del st.session_state[key]
+    # dropdown for employee selection
+    selected = st.selectbox(
+        "Select employee",
+        employees,
+        index=selected_index,
+        key="selected_employee",
+        on_change=on_employee_change,
+    )
+    ##############
+    # Week Range #
+    ##############
+    st.markdown("---")
+    st.subheader("Week Range")
+    base_monday = date.today() - timedelta(days=date.today().weekday())
+    min_weeks_back = 12
+    max_weeks_forward = 20
 
+    week_span = st.slider(
+        "Select week range to view",
+        min_value=-min_weeks_back,
+        max_value=max_weeks_forward,
+        value=(-2, 10),
+        step=1,
+    )
 
-# dropdown for employee selection
-selected = st.sidebar.selectbox(
-    "Select employee",
-    employees,
-    index=selected_index,
-    key="selected_employee",
-    on_change=on_employee_change,
-)
-#################################
-# ---- Add New Employee Form ----
-#################################
-if "show_input" not in st.session_state:
-    st.session_state.show_input = False
+    start_date = base_monday + timedelta(weeks=week_span[0])
+    end_date = base_monday + timedelta(weeks=week_span[1])
+    week_dates = [
+        start_date + timedelta(weeks=i)
+        for i in range((end_date - start_date).days // 7 + 1)
+    ]
+    week_strs = [w.strftime("%d-%b") for w in week_dates]
 
-if not st.session_state.show_input:
-    if st.sidebar.button("➕ Add New Employee", key="show_input_btn"):
-        st.session_state.show_input = True
-        # rerun entire app to show input field
-        st.rerun()
-else:
-    new_emp = st.sidebar.text_input("Enter new employee name", key="new_employee_input")
-    col1, col2 = st.sidebar.columns(2)
-    submit_clicked = col1.button("Submit", key="submit_new_emp")
-    cancel_clicked = col2.button("Cancel", key="cancel_new_emp")
+    st.session_state["week_range"] = week_span
+    st.session_state["week_strs"] = week_strs
+    st.session_state["week_dates"] = week_dates
 
-    if cancel_clicked:
+    #########################
+    # Add New Employee Form #
+    #########################
+    st.markdown("---")
+    # st.subheader("Add New Employee")
+
+    if "show_input" not in st.session_state:
         st.session_state.show_input = False
-        st.rerun()
 
-    if submit_clicked and new_emp:
-        if new_emp not in employees:
-            try:
+    if not st.session_state.show_input:
+        if st.button("➕ Add New Employee", key="show_input_btn"):
+            st.session_state.show_input = True
+            st.rerun()
+    else:
+        new_emp = st.text_input("Enter new employee name", key="new_employee_input")
+        col1, col2 = st.columns(2)
+        if col1.button("Submit", key="submit_new_emp") and new_emp:
+            if new_emp not in employees:
                 df_employees = (
                     pd.concat(
                         [
@@ -121,57 +147,63 @@ else:
                             pd.DataFrame([[new_emp]], columns=["Employee"]),
                         ]
                     )
-                    .drop_duplicates(subset=["Employee"])
+                    .drop_duplicates()
                     .reset_index(drop=True)
                 )
-                # Save the updated employees DataFrame
                 save_csv(df_employees, EMPLOYEES_FILE)
 
-                # Add default leave types for the new employee
-                new_rows = []
-                for leave_type in DEFAULT_LEAVE_TYPES:
-                    for week in week_strs:
-                        new_rows.append(
-                            {
-                                "Employee": new_emp,
-                                "Week": week,
-                                "Project": leave_type,
-                                "Hours": 0,
-                                "Status": "Leave",
-                            }
-                        )
-                # Save the updated employees DataFrame
-                df_all_entries = pd.concat(
-                    [df_all_entries, pd.DataFrame(new_rows)], ignore_index=True
+                # Add default leave types for new employee
+                if "week_strs" in st.session_state:
+                    week_strs = st.session_state["week_strs"]
+                else:
+                    # Fallback (should rarely happen)
+                    base_monday = date.today() - timedelta(days=date.today().weekday())
+                    week_strs = [
+                        (base_monday + timedelta(weeks=i)).strftime("%d-%b")
+                        for i in range(12)
+                    ]
+
+                leave_rows = [
+                    {
+                        "Employee": new_emp,
+                        "Week": week,
+                        "Project": leave,
+                        "Hours": 0,
+                        "Status": "Leave",
+                    }
+                    for leave in DEFAULT_LEAVE_TYPES
+                    for week in week_strs
+                ]
+
+                df_entries = load_csv(
+                    ENTRIES_FILE, ["Employee", "Week", "Project", "Hours", "Status"]
                 )
-                save_csv(df_all_entries, ENTRIES_FILE)
+                df_all = pd.concat(
+                    [df_entries, pd.DataFrame(leave_rows)], ignore_index=True
+                )
+                save_csv(df_all, ENTRIES_FILE)
 
                 st.session_state.show_input = False
-                st.query_params.update(selected=new_emp)
                 st.session_state.new_emp_to_select = new_emp
                 st.rerun()
-            except Exception as e:
-                st.error(f"An error occurred while adding the employee: {e}")
-        else:
-            st.warning("Employee already exists.")
+            else:
+                st.warning("Employee already exists.")
+        if col2.button("Cancel", key="cancel_new_emp"):
+            st.session_state.show_input = False
+            st.rerun()
 
-if not employees:
-    st.sidebar.warning("No employees in database.")
-    st.stop()
-
-if st.sidebar.button("🔄 Clear Cache & Reload"):
-    st.cache_data.clear()
+    # if st.button("🔄 Clear Cache & Reload"):
+    #     st.cache_data.clear()
+    #     st.rerun()
 
 
 employee = Employee(selected, df_all_entries, df_all_skills)
 st.subheader(f"User: {employee.name}")
 # print(f"Selected employee: {employee.name}")
-# print(f"Employee entries: {employee.entries_df}")
-
 
 # ---- Tabs ----
 # tabs = st.tabs(["📊 Utilization Dashboard", "📝 Submit Hours", "👥 Employee Skills"])
-tabs = st.tabs(["Time Planner", "Dashboard"])
+tabs = st.tabs(["Time Planner", "Dashboard", "Skills"])
 
 
 ######################
@@ -185,16 +217,19 @@ with tabs[0]:
     ###############
     total_container = st.empty()
     entry_dfs = [
-        pivot_entries(employee.entries_df, "Confirmed", week_strs),
-        pivot_entries(employee.entries_df, "Tentative", week_strs),
-        pivot_entries(employee.entries_df, "Leave", week_strs),
+        pivot_entries(employee.entries_df, "Confirmed", st.session_state["week_strs"]),
+        pivot_entries(employee.entries_df, "Tentative", st.session_state["week_strs"]),
+        pivot_entries(employee.entries_df, "Leave", st.session_state["week_strs"]),
     ]
     non_empty_entry_dfs = [df for df in entry_dfs if not df.empty]
     if non_empty_entry_dfs:
         all_entries = pd.concat(non_empty_entry_dfs)
     else:
-        all_entries = pd.DataFrame([np.zeros(len(week_strs))], columns=week_strs)
-    total_by_week = all_entries[week_strs].sum().to_frame().T
+        all_entries = pd.DataFrame(
+            [np.zeros(len(st.session_state["week_strs"]))],
+            columns=st.session_state["week_strs"],
+        )
+    total_by_week = all_entries[st.session_state["week_strs"]].sum().to_frame().T
     total_by_week.insert(0, "Type", " Total Hours")
     total_by_week.index = [""] * len(total_by_week)
     total_container.data_editor(
@@ -210,7 +245,9 @@ with tabs[0]:
     ######################
     styled_subheader("Confirmed Projects")
     # Load and pivot Confirmed entries
-    confirmed_df = pivot_entries(employee.entries_df, "Confirmed", week_strs)
+    confirmed_df = pivot_entries(
+        employee.entries_df, "Confirmed", st.session_state["week_strs"]
+    )
     if "confirmed_hash" not in st.session_state:
         st.session_state["confirmed_hash"] = hash_df(confirmed_df)
 
@@ -225,7 +262,9 @@ with tabs[0]:
 
     new_hash = hash_df(edited_confirmed)
     if new_hash != st.session_state["confirmed_hash"]:
-        updated_df = employee.save_entries(edited_confirmed, "Confirmed", week_strs)
+        updated_df = employee.save_entries(
+            edited_confirmed, "Confirmed", st.session_state["week_strs"]
+        )
         df_all_entries = df_all_entries[df_all_entries["Employee"] != employee.name]
         df_all_entries = pd.concat([df_all_entries, updated_df], ignore_index=True)
         save_csv(df_all_entries, ENTRIES_FILE)
@@ -237,7 +276,9 @@ with tabs[0]:
     # TENTATIVE PROJECTS #
     ######################
     styled_subheader("Tentative Projects")
-    tentative_df = pivot_entries(employee.entries_df, "Tentative", week_strs)
+    tentative_df = pivot_entries(
+        employee.entries_df, "Tentative", st.session_state["week_strs"]
+    )
     if "tentative_hash" not in st.session_state:
         st.session_state["tentative_hash"] = hash_df(tentative_df)
 
@@ -251,7 +292,9 @@ with tabs[0]:
 
     new_hash = hash_df(edited_tentative)
     if new_hash != st.session_state["tentative_hash"]:
-        updated_df = employee.save_entries(edited_tentative, "Tentative", week_strs)
+        updated_df = employee.save_entries(
+            edited_tentative, "Tentative", st.session_state["week_strs"]
+        )
         df_all_entries = df_all_entries[df_all_entries["Employee"] != employee.name]
         df_all_entries = pd.concat([df_all_entries, updated_df], ignore_index=True)
         save_csv(df_all_entries, ENTRIES_FILE)
@@ -263,7 +306,9 @@ with tabs[0]:
     # Leave / Vacation #
     ####################
     styled_subheader("Leave / Vacation")
-    leave_data = pivot_entries(employee.entries_df, "Leave", week_strs)
+    leave_data = pivot_entries(
+        employee.entries_df, "Leave", st.session_state["week_strs"]
+    )
     if "Project" in leave_data.columns:
         leave_data = leave_data.rename(columns={"Project": "Type"})
     if "leave_hash" not in st.session_state:
@@ -273,7 +318,7 @@ with tabs[0]:
         leave_data,
         num_rows="dynamic",
         key="leave",
-        column_order=["Type"] + week_strs,
+        column_order=["Type"] + st.session_state["week_strs"],
         column_config={
             "Type": st.column_config.TextColumn(
                 label="Type", width="medium", disabled=True
@@ -284,7 +329,9 @@ with tabs[0]:
 
     new_hash = hash_df(edited_leave)
     if new_hash != st.session_state["leave_hash"]:
-        updated_df = employee.save_entries(edited_leave, "Leave", week_strs)
+        updated_df = employee.save_entries(
+            edited_leave, "Leave", st.session_state["week_strs"]
+        )
         df_all_entries = df_all_entries[df_all_entries["Employee"] != employee.name]
         df_all_entries = pd.concat([df_all_entries, updated_df], ignore_index=True)
         save_csv(df_all_entries, ENTRIES_FILE)
@@ -307,9 +354,15 @@ with tabs[1]:
         # Group by week and status
         df_grouped = df.groupby(["Week", "Status"])["Hours"].sum().reset_index()
 
-        # Ensure consistent week ordering
+        # Convert Week to datetime for correct sorting
+        df_grouped["Week_dt"] = pd.to_datetime(df_grouped["Week"], format="%d-%b")
+        week_strs_sorted = sorted(
+            st.session_state["week_strs"],
+            key=lambda x: pd.to_datetime(x, format="%d-%b"),
+        )
+        df_grouped = df_grouped[df_grouped["Week"].isin(week_strs_sorted)].copy()
         df_grouped["Week"] = pd.Categorical(
-            df_grouped["Week"], categories=week_strs, ordered=True
+            df_grouped["Week"], categories=week_strs_sorted, ordered=True
         )
 
         # Base stacked bar chart
@@ -317,7 +370,7 @@ with tabs[1]:
             alt.Chart(df_grouped)
             .mark_bar()
             .encode(
-                x=alt.X("Week:O", title="Week"),
+                x=alt.X("Week:O", title="Week", sort=week_strs_sorted),
                 y=alt.Y("Hours:Q", title="Total Hours", stack="zero"),
                 color=alt.Color(
                     "Status:N",
@@ -347,6 +400,34 @@ with tabs[1]:
         st.altair_chart(final_chart, use_container_width=True)
     else:
         st.info("No data submitted yet.")
+
+
+################
+# -- SKILLS -- #
+################
+with tabs[2]:
+    # st.header("Employee Skills Matrix")
+
+    with st.expander("Add Skill Entry"):
+        with st.form("skills_form"):
+            skill = st.text_input("Skill")
+            category = st.selectbox("Skill Category", ["Coding", "General", "Software"])
+            level = st.selectbox("Skill Level", ["Beginner", "Intermediate", "Expert"])
+            skill_submit = st.form_submit_button("Add Skill")
+            if skill_submit:
+                new_row = pd.DataFrame(
+                    [[employee.name, category, skill, level]],
+                    columns=["Employee", "Category", "Skill", "Level"],
+                )
+                skills_df = pd.concat([df_all_skills, new_row], ignore_index=True)
+                save_csv(skills_df, SKILLS_FILE)
+                st.success("Skill added!")
+
+    emp_skills = employee.skills_df
+    if not emp_skills.empty:
+        st.dataframe(emp_skills)
+    else:
+        st.info("No skills for this employee.")
 
     # df = employee.entries_df
     # if not df.empty:
