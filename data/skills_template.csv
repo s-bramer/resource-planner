@@ -1,0 +1,50 @@
+Category,Skill
+Hydrogeology,Aquifer Characterization
+Hydrogeology,Pumping Test Analysis
+Hydrogeology,Groundwater Sampling
+Hydrogeology,Borehole Logging
+Hydrogeology,Tracer Tests
+Hydrogeology,Contaminant Hydrogeology
+Hydrogeology,Hydrogeological Risk Assessment
+Hydrogeology,Groundwater Flow Conceptualization
+Hydrogeology,Groundwater Recharge Estimation
+Hydrogeology,Groundwater Monitoring Network Design
+Groundwater Modelling,MODFLOW (Classic & MODFLOW 6)
+Groundwater Modelling,FEFLOW
+Groundwater Modelling,GMS
+Groundwater Modelling,ModelMuse
+Groundwater Modelling,MT3D / RT3D
+Groundwater Modelling,MODPATH / Particle Tracking
+Groundwater Modelling,Model Calibration & Sensitivity Analysis
+Groundwater Modelling,Coupled Surface-Groundwater Modelling
+Groundwater Modelling,Numerical Model Conceptualization
+Groundwater Modelling,Parameter Estimation (PEST)
+Groundwater Modelling,Uncertainty Analysis
+Hydrology,Rainfall-Runoff Modelling
+Hydrology,Catchment Delineation
+Hydrology,Flood Modelling (HEC-RAS / MIKE)
+Hydrology,River Flow Gauging
+Hydrology,Low Flow Analysis
+Hydrology,Water Balance Calculations
+Hydrology,Surface Water Monitoring
+Hydrology,"Time Series Analysis (e.g., rainfall, discharge)"
+Hydrology,Climate Data Interpretation
+Geology,Geological Mapping
+Geology,Core Logging
+Geology,Stratigraphic Interpretation
+Geology,Structural Geology
+Geology,Petrography
+Geology,Sedimentology
+Geology,Geomechanics
+Geology,Geomophology
+Geology,Seismic Interpretation
+Coding,Python (Data Analysis / Automation)
+Coding,R (Statistical Modelling)
+Coding,MATLAB (Scientific Computing)
+Coding,VBA (Excel Automation)
+Coding,SQL (Database Queries)
+Coding,Git / Version Control
+Coding,JavaScript / Web Dev Basics
+Coding,FORTRAN
+Coding,C++
+Coding,C#

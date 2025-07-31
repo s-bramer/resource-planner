@@ -29,23 +29,49 @@
 *** Projects/Hours/Time Planner
 *** Skills Matrix
 * Flow chart
-#+BEGIN_SRC mermaid
-Flowchart for secure employee data handling
-    A[Load entries.csv] --> B[Filter entries for selected employee]
-    B --> C[Employee Object: employee.entries_df]
-    C --> D[User edits Confirmed, Tentative, Leave]
-    D --> E[Press "Save All Entries"]
-    E --> F[employee.save_entries()]
-    F --> G[Load full entries.csv again]
-    G --> H[Remove old entries for current employee]
-    H --> I[Append new/updated entries for current employee]
-    I --> J[Save full updated entries.csv]
+#+BEGIN_SRC mermaid :file img/full.svg :results file link
+flowchart TD
+    A[Start App] --> B[Load Data from CSVs: entries, skills, employees]
+    B --> C[Sidebar: Select or Add Employee]
+    C --> D[Slider: Select Week Range]
+    D --> E[Set week_strs in session_state]
+    E --> F[Create Employee Object]
+    F --> G[Render Time Planner Tab]
+
+    G --> H[Load Confirmed / Tentative / Leave Data]
+    H --> I[User Edits st.data_editor Table]
+
+    I --> J[Detect Changes via Hash Check]
+    J --> K[Save to CSV if Changed]
+    K --> L[st.rerun() to Reload App]
+    L --> B
+
+    F --> M[Render Dashboard Tab]
+    M --> N[Group Data by Week and Status]
+    N --> O[Plot Altair Stacked Bar + Utilization Line]
+
+    C --> P{New Employee?}
+    P -- Yes --> Q[Append to employees.csv]
+    Q --> R[Add Leave Rows per Week]
+    R --> S[Save to entries.csv]
+    S --> T[Update query_params to select new employee]
+    T --> L[st.rerun()]
+    P -- No --> F
 #+END_SRC
 * Deployment
 - Docker image on local server Max will provide
-* TODO Outstanding  [0/3]
+* TODO Outstanding  [1/11]
+- [ ] fix save issue when changing project name
+- [ ] allow deletion of rows/projects
+- [X] user needs to be able to change which weeks to view
+- [ ] add input validation (e.g., no negative hours, cap at 40h/week)
 - [ ] understand caching data and session.state data
+- [ ] there seems to be some redundant loading and saving of the CSV (e.g. when moving week slider)
   - e.g. current employee name should be in session.state data so you stick with it during reloads
   - database can be loaded into cache once than reused, not sure though, gets confusing
   - careful when changing data all session/cache data needs updating to have the latest
 - [ ] log user entries and save current db in background - AVOID DATA LOSS
+- [ ] exporting to Excel or PDF reports.
+- [ ] Sync with Google Sheets or a cloud database for multi-user setups?
+- [ ] send email to Patrick if someone add holiday/vacation
+- [ ] skills need to be updatable

@@ -42,6 +42,11 @@ def pivot_entries(df, status, weeks):
     for week in weeks:
         if week not in pivot.columns:
             pivot[week] = 0
+    # Preserve the original order of "Project" as in the filtered DataFrame
+    pivot = (
+        pivot.set_index("Project").reindex(filtered["Project"].unique()).reset_index()
+    )
+    pivot["Project"] = pivot["Project"].astype(str)  # Ensure "Project" column is string
     return (
         pivot[["Project"] + weeks]
         if not pivot.empty
@@ -49,9 +54,9 @@ def pivot_entries(df, status, weeks):
     )
 
 
-def styled_subheader(text, size=18, color="#dedede"):
+def styled_subheader(text, size=18, color="#dedede", margin=10, padding=0):
     st.markdown(
-        f"<h3 style='font-size:{size}px; color:{color}; margin-bottom:10px;'>{text}</h3>",
+        f"<h3 style='font-size:{size}px; color:{color}; margin:{margin}px; padding:{padding}px;'>{text}</h3>",
         unsafe_allow_html=True,
     )
 
