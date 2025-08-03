@@ -15,7 +15,7 @@ ENTRIES_FILE = "data/entries.csv"
 SKILLS_FILE = "data/skills.csv"
 EMPLOYEES_FILE = "data/employees.csv"
 DEFAULT_LEAVE_TYPES = ["Vacation", "Holiday", "Sick Leave"]
-
+DEFAULT_BD_TYPES = ["Proposal", "Training", "Technical Development", "Conference"]
 
 # ---- Cached Data Load ----
 # @st.cache_data
@@ -284,7 +284,7 @@ with st.sidebar:
                 )
                 save_csv(df_employees, EMPLOYEES_FILE)
 
-                # Add default leave types for new employee
+                # Add default leave and BD types for new employee
                 if "week_strs" in st.session_state:
                     week_strs = st.session_state["week_strs"]
                 else:
@@ -307,14 +307,28 @@ with st.sidebar:
                     for i, leave in enumerate(DEFAULT_LEAVE_TYPES)
                     for week in week_strs
                 ]
+                
+                bd_rows = [
+                    {
+                        "Name": new_emp,
+                        "Row": i,
+                        "Week": week,
+                        "Project": bd,
+                        "Hours": 0,
+                        "Status": "BD",
+                    }
+                    for i, bd in enumerate(DEFAULT_BD_TYPES)
+                    for week in week_strs
+                ]
 
                 df_entries = load_csv(
                     ENTRIES_FILE, ["Name", "Week", "Project", "Hours", "Status"]
                 )
                 df_all = pd.concat(
-                    [df_entries, pd.DataFrame(leave_rows)], ignore_index=True
+                    [df_entries, pd.DataFrame(leave_rows), pd.DataFrame(bd_rows)], ignore_index=True
                 )
                 save_csv(df_all, ENTRIES_FILE)
+                
                 # Add default skills for new employee
                 skills_template = load_csv(
                     "data/skills_template.csv", ["Category", "Skill"]
@@ -396,6 +410,7 @@ with tabs[0]:
     entry_dfs = [
         pivot_entries(employee.entries_df, "Confirmed", st.session_state["week_strs"]),
         pivot_entries(employee.entries_df, "Tentative", st.session_state["week_strs"]),
+        pivot_entries(employee.entries_df, "BD", st.session_state["week_strs"]),
         pivot_entries(employee.entries_df, "Leave", st.session_state["week_strs"]),
     ]
     non_empty_entry_dfs = [df for df in entry_dfs if not df.empty]
@@ -486,11 +501,39 @@ with tabs[0]:
         hide_index=True,
         use_container_width=True,
     )
+    
+    #########################
+    # Buisiness Development #
+    #########################
+    styled_subheader("Buisiness Development")
+    bd_data = pivot_entries(
+        employee.entries_df, "BD", st.session_state["week_strs"]
+    )
+    if "Project" in bd_data.columns:
+        bd_data = bd_data.rename(columns={"Project": "Type"})
+
+    st.data_editor(
+        bd_data,
+        num_rows="dynamic",
+        key="bd",
+        on_change=on_table_change,
+        args=(
+            "bd",
+            bd_data,
+            week_strs,
+            "BD",
+            employee,
+            df_all_entries,
+        ),
+        column_config={"Type": st.column_config.TextColumn(width="medium")},
+        hide_index=True,
+        use_container_width=True,
+    )
 
     ####################
     # Leave / Vacation #
     ####################
-    styled_subheader("Leave / Vacation")
+    styled_subheader("Leave / Holiday")
     leave_data = pivot_entries(
         employee.entries_df, "Leave", st.session_state["week_strs"]
     )
@@ -556,8 +599,8 @@ with tabs[1]:
                         "Status:N",
                         title="Status",
                         scale=alt.Scale(
-                            domain=["Confirmed", "Tentative", "Leave"],
-                            range=["#9dd6fa", "#f0c4f5", "#fae996"],
+                            domain=["Confirmed", "Tentative", "BD", "Leave"],
+                            range=["#9dd6fa", "#f0c4f5", "#71f6cc", "#fae996"],
                         ),
                     ),
                     tooltip=["Week", "Status", "Hours"],
@@ -601,8 +644,8 @@ with tabs[1]:
                         "Status:N",
                         title="Status",
                         scale=alt.Scale(
-                            domain=["Confirmed", "Tentative", "Leave"],
-                            range=["#9dd6fa", "#f0c4f5", "#fae996"],
+                            domain=["Confirmed", "Tentative", "BD", "Leave"],
+                            range=["#9dd6fa", "#f0c4f5", "#71f6cc", "#fae996"],
                         ),
                     ),
                     tooltip=["Week", "Status", "Percentage"],

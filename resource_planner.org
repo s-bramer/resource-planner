@@ -60,7 +60,7 @@ flowchart TD
 #+END_SRC
 * Deployment
 - Docker image on local server Max will provide
-* TODO Outstanding  [3/14]
+* TODO Outstanding  [3/15]
 - [ ] fix save issue when changing project name
 - [ ] allow deletion of rows/projects
 - [X] user needs to be able to change which weeks to view
@@ -78,3 +78,4 @@ flowchart TD
 - [X] add user ID card
 - [ ] fix employee selection (when refreshing current emp should remain)
 - [ ] combine methods on_skills_change and on_table_change into single generic function (move it to utils)
+- [ ] add warning in Dashboard when range selected that extents active weeks - OR fill with zeros (will not update plot)

@@ -1,81 +1,37 @@
 Name,Row,Week,Project,Hours,Status
-Stefan Bramer,,21-Jul,Vacation,0.0,Leave
-Stefan Bramer,,28-Jul,Vacation,0.0,Leave
-Stefan Bramer,,04-Aug,Vacation,0.0,Leave
-Stefan Bramer,,11-Aug,Vacation,0.0,Leave
-Stefan Bramer,,18-Aug,Vacation,0.0,Leave
-Stefan Bramer,,25-Aug,Vacation,0.0,Leave
-Stefan Bramer,,01-Sep,Vacation,0.0,Leave
-Stefan Bramer,,08-Sep,Vacation,0.0,Leave
-Stefan Bramer,,15-Sep,Vacation,0.0,Leave
-Stefan Bramer,,22-Sep,Vacation,0.0,Leave
-Stefan Bramer,,29-Sep,Vacation,0.0,Leave
-Stefan Bramer,,21-Jul,Holiday,0.0,Leave
-Stefan Bramer,,28-Jul,Holiday,0.0,Leave
-Stefan Bramer,,04-Aug,Holiday,0.0,Leave
-Stefan Bramer,,11-Aug,Holiday,0.0,Leave
-Stefan Bramer,,18-Aug,Holiday,0.0,Leave
-Stefan Bramer,,25-Aug,Holiday,0.0,Leave
-Stefan Bramer,,01-Sep,Holiday,0.0,Leave
-Stefan Bramer,,08-Sep,Holiday,0.0,Leave
-Stefan Bramer,,15-Sep,Holiday,0.0,Leave
-Stefan Bramer,,22-Sep,Holiday,0.0,Leave
-Stefan Bramer,,29-Sep,Holiday,0.0,Leave
-Stefan Bramer,,21-Jul,Sick Leave,0.0,Leave
-Stefan Bramer,,28-Jul,Sick Leave,0.0,Leave
-Stefan Bramer,,04-Aug,Sick Leave,0.0,Leave
-Stefan Bramer,,11-Aug,Sick Leave,0.0,Leave
-Stefan Bramer,,18-Aug,Sick Leave,0.0,Leave
-Stefan Bramer,,25-Aug,Sick Leave,0.0,Leave
-Stefan Bramer,,01-Sep,Sick Leave,0.0,Leave
-Stefan Bramer,,08-Sep,Sick Leave,0.0,Leave
-Stefan Bramer,,15-Sep,Sick Leave,0.0,Leave
-Stefan Bramer,,22-Sep,Sick Leave,0.0,Leave
-Stefan Bramer,,29-Sep,Sick Leave,0.0,Leave
-Stefan Bramer,,21-Jul,Hanford RPO,0.0,Confirmed
-Stefan Bramer,,28-Jul,Hanford RPO,40.0,Confirmed
-Stefan Bramer,,04-Aug,Hanford RPO,40.0,Confirmed
-Stefan Bramer,,11-Aug,Hanford RPO,40.0,Confirmed
-Stefan Bramer,,18-Aug,Hanford RPO,40.0,Confirmed
-Stefan Bramer,,25-Aug,Hanford RPO,40.0,Confirmed
-Stefan Bramer,,01-Sep,Hanford RPO,0.0,Confirmed
-Stefan Bramer,,08-Sep,Hanford RPO,0.0,Confirmed
-Stefan Bramer,,15-Sep,Hanford RPO,0.0,Confirmed
-Stefan Bramer,,22-Sep,Hanford RPO,0.0,Confirmed
-Stefan Bramer,,29-Sep,Hanford RPO,0.0,Confirmed
-Goncalo,0.0,28-Jul,Vacation,0.0,Leave
-Goncalo,0.0,04-Aug,Vacation,0.0,Leave
-Goncalo,0.0,11-Aug,Vacation,0.0,Leave
-Goncalo,0.0,18-Aug,Vacation,0.0,Leave
-Goncalo,0.0,25-Aug,Vacation,0.0,Leave
-Goncalo,0.0,01-Sep,Vacation,0.0,Leave
-Goncalo,0.0,08-Sep,Vacation,0.0,Leave
-Goncalo,0.0,15-Sep,Vacation,0.0,Leave
-Goncalo,0.0,22-Sep,Vacation,0.0,Leave
-Goncalo,0.0,29-Sep,Vacation,0.0,Leave
-Goncalo,0.0,06-Oct,Vacation,0.0,Leave
-Goncalo,1.0,28-Jul,Holiday,0.0,Leave
-Goncalo,1.0,04-Aug,Holiday,0.0,Leave
-Goncalo,1.0,11-Aug,Holiday,0.0,Leave
-Goncalo,1.0,18-Aug,Holiday,0.0,Leave
-Goncalo,1.0,25-Aug,Holiday,0.0,Leave
-Goncalo,1.0,01-Sep,Holiday,0.0,Leave
-Goncalo,1.0,08-Sep,Holiday,0.0,Leave
-Goncalo,1.0,15-Sep,Holiday,0.0,Leave
-Goncalo,1.0,22-Sep,Holiday,0.0,Leave
-Goncalo,1.0,29-Sep,Holiday,0.0,Leave
-Goncalo,1.0,06-Oct,Holiday,0.0,Leave
-Goncalo,2.0,28-Jul,Sick Leave,0.0,Leave
-Goncalo,2.0,04-Aug,Sick Leave,0.0,Leave
-Goncalo,2.0,11-Aug,Sick Leave,0.0,Leave
-Goncalo,2.0,18-Aug,Sick Leave,0.0,Leave
-Goncalo,2.0,25-Aug,Sick Leave,0.0,Leave
-Goncalo,2.0,01-Sep,Sick Leave,0.0,Leave
-Goncalo,2.0,08-Sep,Sick Leave,0.0,Leave
-Goncalo,2.0,15-Sep,Sick Leave,0.0,Leave
-Goncalo,2.0,22-Sep,Sick Leave,0.0,Leave
-Goncalo,2.0,29-Sep,Sick Leave,0.0,Leave
-Goncalo,2.0,06-Oct,Sick Leave,0.0,Leave
+Goncalo,,28-Jul,Vacation,0.0,Leave
+Goncalo,,04-Aug,Vacation,0.0,Leave
+Goncalo,,11-Aug,Vacation,0.0,Leave
+Goncalo,,18-Aug,Vacation,0.0,Leave
+Goncalo,,25-Aug,Vacation,0.0,Leave
+Goncalo,,01-Sep,Vacation,0.0,Leave
+Goncalo,,08-Sep,Vacation,0.0,Leave
+Goncalo,,15-Sep,Vacation,0.0,Leave
+Goncalo,,22-Sep,Vacation,0.0,Leave
+Goncalo,,29-Sep,Vacation,0.0,Leave
+Goncalo,,06-Oct,Vacation,0.0,Leave
+Goncalo,,28-Jul,Holiday,0.0,Leave
+Goncalo,,04-Aug,Holiday,0.0,Leave
+Goncalo,,11-Aug,Holiday,0.0,Leave
+Goncalo,,18-Aug,Holiday,0.0,Leave
+Goncalo,,25-Aug,Holiday,0.0,Leave
+Goncalo,,01-Sep,Holiday,0.0,Leave
+Goncalo,,08-Sep,Holiday,0.0,Leave
+Goncalo,,15-Sep,Holiday,0.0,Leave
+Goncalo,,22-Sep,Holiday,0.0,Leave
+Goncalo,,29-Sep,Holiday,0.0,Leave
+Goncalo,,06-Oct,Holiday,0.0,Leave
+Goncalo,,28-Jul,Sick Leave,0.0,Leave
+Goncalo,,04-Aug,Sick Leave,0.0,Leave
+Goncalo,,11-Aug,Sick Leave,0.0,Leave
+Goncalo,,18-Aug,Sick Leave,0.0,Leave
+Goncalo,,25-Aug,Sick Leave,0.0,Leave
+Goncalo,,01-Sep,Sick Leave,0.0,Leave
+Goncalo,,08-Sep,Sick Leave,0.0,Leave
+Goncalo,,15-Sep,Sick Leave,0.0,Leave
+Goncalo,,22-Sep,Sick Leave,0.0,Leave
+Goncalo,,29-Sep,Sick Leave,0.0,Leave
+Goncalo,,06-Oct,Sick Leave,0.0,Leave
 Kath,,28-Jul,Vacation,0.0,Leave
 Kath,,04-Aug,Vacation,0.0,Leave
 Kath,,11-Aug,Vacation,0.0,Leave
@@ -109,16 +65,258 @@ Kath,,15-Sep,Sick Leave,0.0,Leave
 Kath,,22-Sep,Sick Leave,0.0,Leave
 Kath,,29-Sep,Sick Leave,0.0,Leave
 Kath,,06-Oct,Sick Leave,0.0,Leave
-Kath,0.0,28-Jul,This is a project,34.0,Confirmed
-Kath,0.0,04-Aug,This is a project,0.0,Confirmed
-Kath,0.0,11-Aug,This is a project,4.0,Confirmed
-Kath,0.0,18-Aug,This is a project,0.0,Confirmed
-Kath,0.0,25-Aug,This is a project,23.0,Confirmed
-Kath,0.0,01-Sep,This is a project,0.0,Confirmed
-Kath,0.0,08-Sep,This is a project,0.0,Confirmed
-Kath,0.0,15-Sep,This is a project,0.0,Confirmed
-Kath,0.0,22-Sep,This is a project,0.0,Confirmed
-Kath,0.0,29-Sep,This is a project,0.0,Confirmed
-Kath,0.0,06-Oct,This is a project,0.0,Confirmed
-Kath,0.0,13-Oct,This is a project,0.0,Confirmed
-Kath,0.0,20-Oct,This is a project,12.0,Confirmed
+Kath,,28-Jul,This is a project,34.0,Confirmed
+Kath,,04-Aug,This is a project,0.0,Confirmed
+Kath,,11-Aug,This is a project,4.0,Confirmed
+Kath,,18-Aug,This is a project,0.0,Confirmed
+Kath,,25-Aug,This is a project,23.0,Confirmed
+Kath,,01-Sep,This is a project,0.0,Confirmed
+Kath,,08-Sep,This is a project,0.0,Confirmed
+Kath,,15-Sep,This is a project,0.0,Confirmed
+Kath,,22-Sep,This is a project,0.0,Confirmed
+Kath,,29-Sep,This is a project,0.0,Confirmed
+Kath,,06-Oct,This is a project,0.0,Confirmed
+Kath,,13-Oct,This is a project,0.0,Confirmed
+Kath,,20-Oct,This is a project,12.0,Confirmed
+Stefan Bramer,,21-Jul,Vacation,0.0,Leave
+Stefan Bramer,,28-Jul,Vacation,0.0,Leave
+Stefan Bramer,,04-Aug,Vacation,0.0,Leave
+Stefan Bramer,,11-Aug,Vacation,0.0,Leave
+Stefan Bramer,,18-Aug,Vacation,0.0,Leave
+Stefan Bramer,,25-Aug,Vacation,0.0,Leave
+Stefan Bramer,,01-Sep,Vacation,0.0,Leave
+Stefan Bramer,,08-Sep,Vacation,0.0,Leave
+Stefan Bramer,,15-Sep,Vacation,0.0,Leave
+Stefan Bramer,,22-Sep,Vacation,0.0,Leave
+Stefan Bramer,,29-Sep,Vacation,0.0,Leave
+Stefan Bramer,,21-Jul,Holiday,0.0,Leave
+Stefan Bramer,,28-Jul,Holiday,0.0,Leave
+Stefan Bramer,,04-Aug,Holiday,0.0,Leave
+Stefan Bramer,,11-Aug,Holiday,0.0,Leave
+Stefan Bramer,,18-Aug,Holiday,0.0,Leave
+Stefan Bramer,,25-Aug,Holiday,0.0,Leave
+Stefan Bramer,,01-Sep,Holiday,0.0,Leave
+Stefan Bramer,,08-Sep,Holiday,0.0,Leave
+Stefan Bramer,,15-Sep,Holiday,0.0,Leave
+Stefan Bramer,,22-Sep,Holiday,0.0,Leave
+Stefan Bramer,,29-Sep,Holiday,0.0,Leave
+Stefan Bramer,,21-Jul,Sick Leave,0.0,Leave
+Stefan Bramer,,28-Jul,Sick Leave,0.0,Leave
+Stefan Bramer,,04-Aug,Sick Leave,0.0,Leave
+Stefan Bramer,,11-Aug,Sick Leave,0.0,Leave
+Stefan Bramer,,18-Aug,Sick Leave,0.0,Leave
+Stefan Bramer,,25-Aug,Sick Leave,0.0,Leave
+Stefan Bramer,,01-Sep,Sick Leave,0.0,Leave
+Stefan Bramer,,08-Sep,Sick Leave,0.0,Leave
+Stefan Bramer,,15-Sep,Sick Leave,0.0,Leave
+Stefan Bramer,,22-Sep,Sick Leave,0.0,Leave
+Stefan Bramer,,29-Sep,Sick Leave,0.0,Leave
+Stefan Bramer,,28-Jul,Hanford RPO,40.0,Confirmed
+Stefan Bramer,,04-Aug,Hanford RPO,40.0,Confirmed
+Stefan Bramer,,11-Aug,Hanford RPO,40.0,Confirmed
+Stefan Bramer,,18-Aug,Hanford RPO,40.0,Confirmed
+Stefan Bramer,,25-Aug,Hanford RPO,38.0,Confirmed
+Stefan Bramer,,01-Sep,Hanford RPO,0.0,Confirmed
+Stefan Bramer,,08-Sep,Hanford RPO,0.0,Confirmed
+Stefan Bramer,,15-Sep,Hanford RPO,0.0,Confirmed
+Stefan Bramer,,22-Sep,Hanford RPO,0.0,Confirmed
+Stefan Bramer,,29-Sep,Hanford RPO,0.0,Confirmed
+Stefan Bramer,,06-Oct,Hanford RPO,0.0,Confirmed
+Thomas,,28-Jul,DAR,12.0,Confirmed
+Thomas,,04-Aug,DAR,3.0,Confirmed
+Thomas,,11-Aug,DAR,0.0,Confirmed
+Thomas,,18-Aug,DAR,3.0,Confirmed
+Thomas,,25-Aug,DAR,23.0,Confirmed
+Thomas,,01-Sep,DAR,0.0,Confirmed
+Thomas,,08-Sep,DAR,0.0,Confirmed
+Thomas,,15-Sep,DAR,0.0,Confirmed
+Thomas,,22-Sep,DAR,0.0,Confirmed
+Thomas,,29-Sep,DAR,0.0,Confirmed
+Thomas,,06-Oct,DAR,0.0,Confirmed
+Thomas,,28-Jul,Not sure,12.0,Tentative
+Thomas,,04-Aug,Not sure,4.0,Tentative
+Thomas,,11-Aug,Not sure,0.0,Tentative
+Thomas,,18-Aug,Not sure,5.0,Tentative
+Thomas,,25-Aug,Not sure,0.0,Tentative
+Thomas,,01-Sep,Not sure,0.0,Tentative
+Thomas,,08-Sep,Not sure,0.0,Tentative
+Thomas,,15-Sep,Not sure,0.0,Tentative
+Thomas,,22-Sep,Not sure,0.0,Tentative
+Thomas,,29-Sep,Not sure,0.0,Tentative
+Thomas,,06-Oct,Not sure,0.0,Tentative
+Thomas,,28-Jul,Proposal,20.0,BD
+Thomas,,04-Aug,Proposal,0.0,BD
+Thomas,,11-Aug,Proposal,0.0,BD
+Thomas,,18-Aug,Proposal,0.0,BD
+Thomas,,25-Aug,Proposal,0.0,BD
+Thomas,,01-Sep,Proposal,0.0,BD
+Thomas,,08-Sep,Proposal,0.0,BD
+Thomas,,15-Sep,Proposal,0.0,BD
+Thomas,,22-Sep,Proposal,0.0,BD
+Thomas,,29-Sep,Proposal,0.0,BD
+Thomas,,06-Oct,Proposal,0.0,BD
+Thomas,,28-Jul,Training,0.0,BD
+Thomas,,04-Aug,Training,23.0,BD
+Thomas,,11-Aug,Training,0.0,BD
+Thomas,,18-Aug,Training,0.0,BD
+Thomas,,25-Aug,Training,0.0,BD
+Thomas,,01-Sep,Training,0.0,BD
+Thomas,,08-Sep,Training,0.0,BD
+Thomas,,15-Sep,Training,0.0,BD
+Thomas,,22-Sep,Training,0.0,BD
+Thomas,,29-Sep,Training,0.0,BD
+Thomas,,06-Oct,Training,0.0,BD
+Thomas,,28-Jul,Technical Development,0.0,BD
+Thomas,,04-Aug,Technical Development,0.0,BD
+Thomas,,11-Aug,Technical Development,0.0,BD
+Thomas,,18-Aug,Technical Development,0.0,BD
+Thomas,,25-Aug,Technical Development,12.0,BD
+Thomas,,01-Sep,Technical Development,0.0,BD
+Thomas,,08-Sep,Technical Development,0.0,BD
+Thomas,,15-Sep,Technical Development,0.0,BD
+Thomas,,22-Sep,Technical Development,0.0,BD
+Thomas,,29-Sep,Technical Development,0.0,BD
+Thomas,,06-Oct,Technical Development,0.0,BD
+Thomas,,28-Jul,Conference,0.0,BD
+Thomas,,04-Aug,Conference,0.0,BD
+Thomas,,11-Aug,Conference,0.0,BD
+Thomas,,18-Aug,Conference,0.0,BD
+Thomas,,25-Aug,Conference,0.0,BD
+Thomas,,01-Sep,Conference,0.0,BD
+Thomas,,08-Sep,Conference,0.0,BD
+Thomas,,15-Sep,Conference,0.0,BD
+Thomas,,22-Sep,Conference,0.0,BD
+Thomas,,29-Sep,Conference,0.0,BD
+Thomas,,06-Oct,Conference,0.0,BD
+Thomas,,28-Jul,Vacation,0.0,Leave
+Thomas,,04-Aug,Vacation,0.0,Leave
+Thomas,,11-Aug,Vacation,0.0,Leave
+Thomas,,18-Aug,Vacation,32.0,Leave
+Thomas,,25-Aug,Vacation,0.0,Leave
+Thomas,,01-Sep,Vacation,0.0,Leave
+Thomas,,08-Sep,Vacation,0.0,Leave
+Thomas,,15-Sep,Vacation,0.0,Leave
+Thomas,,22-Sep,Vacation,0.0,Leave
+Thomas,,29-Sep,Vacation,0.0,Leave
+Thomas,,06-Oct,Vacation,0.0,Leave
+Thomas,,28-Jul,Holiday,0.0,Leave
+Thomas,,04-Aug,Holiday,8.0,Leave
+Thomas,,11-Aug,Holiday,0.0,Leave
+Thomas,,18-Aug,Holiday,0.0,Leave
+Thomas,,25-Aug,Holiday,0.0,Leave
+Thomas,,01-Sep,Holiday,8.0,Leave
+Thomas,,08-Sep,Holiday,0.0,Leave
+Thomas,,15-Sep,Holiday,0.0,Leave
+Thomas,,22-Sep,Holiday,0.0,Leave
+Thomas,,29-Sep,Holiday,0.0,Leave
+Thomas,,06-Oct,Holiday,0.0,Leave
+Thomas,,28-Jul,Sick Leave,0.0,Leave
+Thomas,,04-Aug,Sick Leave,0.0,Leave
+Thomas,,11-Aug,Sick Leave,0.0,Leave
+Thomas,,18-Aug,Sick Leave,0.0,Leave
+Thomas,,25-Aug,Sick Leave,0.0,Leave
+Thomas,,01-Sep,Sick Leave,0.0,Leave
+Thomas,,08-Sep,Sick Leave,0.0,Leave
+Thomas,,15-Sep,Sick Leave,0.0,Leave
+Thomas,,22-Sep,Sick Leave,0.0,Leave
+Thomas,,29-Sep,Sick Leave,0.0,Leave
+Thomas,,06-Oct,Sick Leave,0.0,Leave
+William,0.0,28-Jul,P1,10.0,Confirmed
+William,0.0,04-Aug,P1,10.0,Confirmed
+William,0.0,11-Aug,P1,10.0,Confirmed
+William,0.0,18-Aug,P1,10.0,Confirmed
+William,0.0,25-Aug,P1,0.0,Confirmed
+William,0.0,01-Sep,P1,0.0,Confirmed
+William,0.0,08-Sep,P1,0.0,Confirmed
+William,0.0,15-Sep,P1,0.0,Confirmed
+William,0.0,22-Sep,P1,0.0,Confirmed
+William,0.0,29-Sep,P1,0.0,Confirmed
+William,0.0,06-Oct,P1,0.0,Confirmed
+William,0.0,28-Jul,P33,0.0,Tentative
+William,0.0,04-Aug,P33,0.0,Tentative
+William,0.0,11-Aug,P33,0.0,Tentative
+William,0.0,18-Aug,P33,0.0,Tentative
+William,0.0,25-Aug,P33,33.0,Tentative
+William,0.0,01-Sep,P33,33.0,Tentative
+William,0.0,08-Sep,P33,0.0,Tentative
+William,0.0,15-Sep,P33,0.0,Tentative
+William,0.0,22-Sep,P33,0.0,Tentative
+William,0.0,29-Sep,P33,0.0,Tentative
+William,0.0,06-Oct,P33,0.0,Tentative
+William,0.0,28-Jul,Vacation,0.0,Leave
+William,0.0,04-Aug,Vacation,0.0,Leave
+William,0.0,11-Aug,Vacation,0.0,Leave
+William,0.0,18-Aug,Vacation,22.0,Leave
+William,0.0,25-Aug,Vacation,0.0,Leave
+William,0.0,01-Sep,Vacation,10.0,Leave
+William,0.0,08-Sep,Vacation,0.0,Leave
+William,0.0,15-Sep,Vacation,0.0,Leave
+William,0.0,22-Sep,Vacation,0.0,Leave
+William,0.0,29-Sep,Vacation,0.0,Leave
+William,0.0,06-Oct,Vacation,0.0,Leave
+William,1.0,28-Jul,Holiday,34.0,Leave
+William,1.0,04-Aug,Holiday,0.0,Leave
+William,1.0,11-Aug,Holiday,0.0,Leave
+William,1.0,18-Aug,Holiday,0.0,Leave
+William,1.0,25-Aug,Holiday,0.0,Leave
+William,1.0,01-Sep,Holiday,0.0,Leave
+William,1.0,08-Sep,Holiday,12.0,Leave
+William,1.0,15-Sep,Holiday,0.0,Leave
+William,1.0,22-Sep,Holiday,0.0,Leave
+William,1.0,29-Sep,Holiday,0.0,Leave
+William,1.0,06-Oct,Holiday,0.0,Leave
+William,2.0,28-Jul,Sick Leave,0.0,Leave
+William,2.0,04-Aug,Sick Leave,0.0,Leave
+William,2.0,11-Aug,Sick Leave,0.0,Leave
+William,2.0,18-Aug,Sick Leave,0.0,Leave
+William,2.0,25-Aug,Sick Leave,0.0,Leave
+William,2.0,01-Sep,Sick Leave,0.0,Leave
+William,2.0,08-Sep,Sick Leave,0.0,Leave
+William,2.0,15-Sep,Sick Leave,0.0,Leave
+William,2.0,22-Sep,Sick Leave,0.0,Leave
+William,2.0,29-Sep,Sick Leave,0.0,Leave
+William,2.0,06-Oct,Sick Leave,0.0,Leave
+William,0.0,28-Jul,Proposal,0.0,BD
+William,0.0,04-Aug,Proposal,0.0,BD
+William,0.0,11-Aug,Proposal,0.0,BD
+William,0.0,18-Aug,Proposal,0.0,BD
+William,0.0,25-Aug,Proposal,0.0,BD
+William,0.0,01-Sep,Proposal,0.0,BD
+William,0.0,08-Sep,Proposal,0.0,BD
+William,0.0,15-Sep,Proposal,0.0,BD
+William,0.0,22-Sep,Proposal,0.0,BD
+William,0.0,29-Sep,Proposal,0.0,BD
+William,0.0,06-Oct,Proposal,0.0,BD
+William,1.0,28-Jul,Training,0.0,BD
+William,1.0,04-Aug,Training,0.0,BD
+William,1.0,11-Aug,Training,12.0,BD
+William,1.0,18-Aug,Training,0.0,BD
+William,1.0,25-Aug,Training,12.0,BD
+William,1.0,01-Sep,Training,0.0,BD
+William,1.0,08-Sep,Training,0.0,BD
+William,1.0,15-Sep,Training,0.0,BD
+William,1.0,22-Sep,Training,0.0,BD
+William,1.0,29-Sep,Training,0.0,BD
+William,1.0,06-Oct,Training,0.0,BD
+William,2.0,28-Jul,Technical Development,0.0,BD
+William,2.0,04-Aug,Technical Development,0.0,BD
+William,2.0,11-Aug,Technical Development,0.0,BD
+William,2.0,18-Aug,Technical Development,0.0,BD
+William,2.0,25-Aug,Technical Development,0.0,BD
+William,2.0,01-Sep,Technical Development,0.0,BD
+William,2.0,08-Sep,Technical Development,0.0,BD
+William,2.0,15-Sep,Technical Development,0.0,BD
+William,2.0,22-Sep,Technical Development,0.0,BD
+William,2.0,29-Sep,Technical Development,0.0,BD
+William,2.0,06-Oct,Technical Development,0.0,BD
+William,3.0,28-Jul,Conference,0.0,BD
+William,3.0,04-Aug,Conference,0.0,BD
+William,3.0,11-Aug,Conference,0.0,BD
+William,3.0,18-Aug,Conference,0.0,BD
+William,3.0,25-Aug,Conference,0.0,BD
+William,3.0,01-Sep,Conference,0.0,BD
+William,3.0,08-Sep,Conference,0.0,BD
+William,3.0,15-Sep,Conference,0.0,BD
+William,3.0,22-Sep,Conference,0.0,BD
+William,3.0,29-Sep,Conference,0.0,BD
+William,3.0,06-Oct,Conference,0.0,BD
